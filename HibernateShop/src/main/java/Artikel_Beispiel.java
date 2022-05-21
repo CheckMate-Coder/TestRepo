@@ -3,7 +3,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="Hib_Artikel")
-public class Artikel {
+public class Artikel_Beispiel {
 	@Column(length = 50)
 	private String artikelname;
 	
@@ -14,12 +14,12 @@ public class Artikel {
 	private double preis;
 	
 	@OneToMany(mappedBy = "artikel", fetch=FetchType.EAGER)
-	private List<Warenkorb> warenkorbList;
+	private List<Warenkorb_Beisipiel> warenkorbList;
 	
-	public Artikel()
+	public Artikel_Beispiel()
 	{
 	}
-	public Artikel(Long artikelnummer, String artikelname, double preis) {
+	public Artikel_Beispiel(Long artikelnummer, String artikelname, double preis) {
 		this.artikelname = artikelname;
 		this.artikelnummer = artikelnummer;
 		this.preis = preis;
@@ -50,11 +50,11 @@ public class Artikel {
 		this.preis = preis;
 	}
 
-	public List<Warenkorb> getWarenkorbList() {
+	public List<Warenkorb_Beisipiel> getWarenkorbList() {
 		return warenkorbList;
 	}
 
-	public void setWarenkorbList(List<Warenkorb> warenkorbList) {
+	public void setWarenkorbList(List<Warenkorb_Beisipiel> warenkorbList) {
 		this.warenkorbList = warenkorbList;
 	}
 

@@ -7,7 +7,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.PersistenceUnit;
 import jakarta.transaction.Transactional;
 
-public class Main {
+public class Main_Beispiel {
 @PersistenceUnit
 private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("PersistenceUnit");
 @PersistenceContext

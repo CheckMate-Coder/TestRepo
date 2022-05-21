@@ -3,13 +3,13 @@ import java.util.List;
 import jakarta.persistence.*;
 @Entity
 @DiscriminatorValue("Kunde")
-public class Kunde extends Person {
+public class Kunde_Beispiel extends Person_Beispiel {
 	@Column(name="email")
 	private String email;
-	public Kunde() {
+	public Kunde_Beispiel() {
 		super();
 	}
-	public Kunde(String vorname, String nachname, String email) {
+	public Kunde_Beispiel(String vorname, String nachname, String email) {
 		super(vorname, nachname);
 		this.email=email;
 		
@@ -27,10 +27,10 @@ public class Kunde extends Person {
 	
 
 	@OneToMany(mappedBy="kunde", fetch=FetchType.EAGER)
-	private List<Warenkorb> warenkorbList = new ArrayList<Warenkorb>();
+	private List<Warenkorb_Beisipiel> warenkorbList = new ArrayList<Warenkorb_Beisipiel>();
 	
 	
-	public List<Warenkorb> getWarenkorbList()
+	public List<Warenkorb_Beisipiel> getWarenkorbList()
 	{
 		return warenkorbList;
 	}

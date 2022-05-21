@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 @DiscriminatorColumn(name="PTyp", discriminatorType=DiscriminatorType.STRING)
 @DiscriminatorValue("Person")
 @Table(name ="Hib_Person")
-public class Person {
+public class Person_Beispiel {
 	@Column(name="pnr")
 	@Id
 	@GeneratedValue
@@ -24,11 +24,11 @@ public class Person {
 	@Column(name="nachname")
 	private String nachname;
 	
-	Person(){
+	Person_Beispiel(){
 		
 	}
 	
-	Person(String vorname, String nachname)
+	Person_Beispiel(String vorname, String nachname)
 	{
 		this.vorname = vorname;
 		this.nachname = nachname;

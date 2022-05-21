@@ -1,14 +1,14 @@
 import jakarta.persistence.*;
 
 @Entity(name="Hib_Warenkorb")
-@IdClass (WarenkorbPK.class)
-public class Warenkorb{
+@IdClass (WarenkorbPK_Beispiel.class)
+public class Warenkorb_Beisipiel{
 	@ManyToOne
 	@JoinColumn(name="pnr", referencedColumnName = "pnr", insertable = false, updatable=false)
-	private Kunde kunde;
+	private Kunde_Beispiel kunde;
 	@ManyToOne
 	@JoinColumn(name="artikelnummer", referencedColumnName = "artikelnummer", insertable = false, updatable=false)
-	private Artikel artikel;
+	private Artikel_Beispiel artikel;
 	@Column(name="anzahl", nullable=false)
 	private Long anzahl;
 	@Id
@@ -17,9 +17,9 @@ public class Warenkorb{
 	@Id
 	@Column(name="pnr", nullable=false)
 	private Long pnr;
-	public Warenkorb() {
+	public Warenkorb_Beisipiel() {
 	}
-	public Warenkorb(Kunde kunde, Artikel artikel, Long anzahl) {
+	public Warenkorb_Beisipiel(Kunde_Beispiel kunde, Artikel_Beispiel artikel, Long anzahl) {
 		this.anzahl = anzahl;
 		this.artikel = artikel;
 		this.kunde = kunde;
@@ -37,10 +37,10 @@ public class Warenkorb{
 	{
 		this.pnr = pnr;
 	}
-	public Artikel getArtikel() {
+	public Artikel_Beispiel getArtikel() {
 		return artikel;
 	}
-	public Kunde getKunde() {
+	public Kunde_Beispiel getKunde() {
 		return kunde;
 	}
 
